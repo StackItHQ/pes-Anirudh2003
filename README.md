@@ -68,6 +68,6 @@ All the best ✨.
                 Row 1: Creates table or adds columns based on header changes.
                 Other Rows: Inserts, updates, or deletes data based on cell edits.
       - onSheetCreate(e): Triggered when a new sheet is created, sends table structure (from row 1) to the server if the first cell is "id".
-      - POST Requests: Sent to the server at https://first-rewse.run-ap-south1.goorm.site/ for syncing data.
+      - POST Requests: Sent to the server at https://your-url/ for syncing data.
   - To make this work, host you flask server on any public domain and use the url to send the requests.
   - To have synchronous flow from SQL to Google Sheets, I've in-corporated Google Sheets API for continuous update/insert/delete.
