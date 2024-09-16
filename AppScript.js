@@ -30,7 +30,7 @@ function StartPoint() {
   
 
         try {
-          UrlFetchApp.fetch("https://first-rewse.run-ap-south1.goorm.site/create", options);
+          UrlFetchApp.fetch("https://your-domain/create", options);
           Logger.log("API call successful");
         } catch (error) {
           Logger.log("Error making API call: " + error);
@@ -54,7 +54,7 @@ function StartPoint() {
   
 
         try {
-          UrlFetchApp.fetch("https://first-rewse.run-ap-south1.goorm.site/create", options);
+          UrlFetchApp.fetch("https://your-domain/create", options);
           Logger.log("API call successful");
         } catch (error) {
           Logger.log("Error making API call: " + error);
@@ -84,7 +84,7 @@ function StartPoint() {
   
 
           try {
-            UrlFetchApp.fetch("https://first-rewse.run-ap-south1.goorm.site/syncc", options);
+            UrlFetchApp.fetch("https://your-domain/syncc", options);
             Logger.log("API call successful");
           } catch (error) {
             Logger.log("Error making API call: " + error);
@@ -112,7 +112,7 @@ function StartPoint() {
   
 
           try {
-            UrlFetchApp.fetch("https://first-rewse.run-ap-south1.goorm.site/syncc", options);
+            UrlFetchApp.fetch("https://your-domain/syncc", options);
             Logger.log("API call successful");
           } catch (error) {
             Logger.log("Error making API call: " + error);
@@ -145,7 +145,7 @@ function StartPoint() {
   
 
           try {
-            UrlFetchApp.fetch("https://first-rewse.run-ap-south1.goorm.site/syncc", options);
+            UrlFetchApp.fetch("https://your-domain/syncc", options);
             Logger.log("API call successful");
           } catch (error) {
             Logger.log("Error making API call: " + error);
@@ -175,7 +175,7 @@ function StartPoint() {
   
 
           try {
-            UrlFetchApp.fetch("https://first-rewse.run-ap-south1.goorm.site/syncc", options);
+            UrlFetchApp.fetch("https://your-domain/syncc", options);
             Logger.log("API call successful");
           } catch (error) {
             Logger.log("Error making API call: " + error);
@@ -206,7 +206,7 @@ function StartPoint() {
   
 
           try {
-            UrlFetchApp.fetch("https://first-rewse.run-ap-south1.goorm.site/syncc", options);
+            UrlFetchApp.fetch("https://your-domain/syncc", options);
             Logger.log("API call successful");
           } catch (error) {
             Logger.log("Error making API call: " + error);
@@ -253,7 +253,7 @@ function StartPoint() {
         };
 
         try {
-          var response = UrlFetchApp.fetch("https://first-rewse.run-ap-south1.goorm.site/create", options);
+          var response = UrlFetchApp.fetch("https://your-domain/create", options);
           Logger.log("API call successful: " + response.getContentText());
           SpreadsheetApp.getUi().alert('Table created successfully!');
         } catch (error) {
