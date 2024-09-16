@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/AHFn7Vbn)
 # Superjoin Hiring Assignment
 
 ### Welcome to Superjoin's hiring assignment! 🚀
@@ -58,4 +59,22 @@ We're available at techhiring@superjoin.ai for all queries.
 All the best ✨.
 
 ## Developer's Section
-*Add your video here, and your approach to the problem (optional). Leave some comments for us here if you want, we will be reading this :)*
+1. Video Link: https://drive.google.com/file/d/1r8e5ccRAYSMPACLd1gNLNB29_A053lDo/view?usp=drive_link
+2. Approach: 
+  - To setup a connection with Google Sheets I have used Google Sheets API
+  - To have the synchronous flow from a Google Sheet to a SQL database i have designed a custom Apps Script code which does the following:
+      - StartPoint: Logs a startup message (for debugging).
+      - nEdit(e): Triggered on any cell edit, sends updates to the server:
+                Row 1: Creates table or adds columns based on header changes.
+                Other Rows: Inserts, updates, or deletes data based on cell edits.
+      - onSheetCreate(e): Triggered when a new sheet is created, sends table structure (from row 1) to the server if the first cell is "id".
+      - POST Requests: Sent to the server at https://your-url/ for syncing data.
+  - To make this work, host you flask server on any public domain and use the url to send the requests.
+  - To have synchronous flow from SQL to Google Sheets, I've in-corporated Google Sheets API for continuous update/insert/delete.
+3. Steps to Run the Code:
+  - setup a Google Sheets API service account and download the credentials and rename it to "credentials.json"
+  - Open a google sheet and in the extension tab open Apps Script and paste the code from AppScript.js and setup a trigger on onEdit()
+  - Deploy a Python flask server and use the code present in flask-server.py.
+  - Now u can Update SQL from google sheets
+  - To do the vice-versa process, create a python file where you SQL database is created and use the code from sql-sheets.py.
+  - From this we can update the Google Sheets from any SQL updation.
