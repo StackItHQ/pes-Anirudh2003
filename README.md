@@ -71,3 +71,10 @@ All the best ✨.
       - POST Requests: Sent to the server at https://your-url/ for syncing data.
   - To make this work, host you flask server on any public domain and use the url to send the requests.
   - To have synchronous flow from SQL to Google Sheets, I've in-corporated Google Sheets API for continuous update/insert/delete.
+3. Steps to Run the Code:
+  - setup a Google Sheets API service account and download the credentials and rename it to "credentials.json"
+  - Open a google sheet and in the extension tab open Apps Script and paste the code from AppScript.js and setup a trigger on onEdit()
+  - Deploy a Python flask server and use the code present in flask-server.py.
+  - Now u can Update SQL from google sheets
+  - To do the vice-versa process, create a python file where you SQL database is created and use the code from sql-sheets.py.
+  - From this we can update the Google Sheets from any SQL updation.
